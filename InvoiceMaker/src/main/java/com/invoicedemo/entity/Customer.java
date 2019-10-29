@@ -5,38 +5,38 @@ import java.io.Serializable;
 public class Customer implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	private int ID;
-	private String Imie;
-	private String Nazwisko;
+	private int id;
+	private String firstName;
+	private String lastName;
 	private String NIP;
-	private String Firma;
+	private String company;
 	
 	public Customer() {
 		
 	}
 
-	public int getID() {
-		return ID;
+	public int getId() {
+		return id;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getImie() {
-		return Imie;
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public void setImie(String imie) {
-		Imie = imie;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public String getNazwisko() {
-		return Nazwisko;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setNazwisko(String nazwisko) {
-		Nazwisko = nazwisko;
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 	public String getNIP() {
@@ -47,19 +47,21 @@ public class Customer implements Serializable {
 		NIP = nIP;
 	}
 
-	public String getFirma() {
-		return Firma;
+	public String getCompany() {
+		return company;
 	}
 
-	public void setFirma(String firma) {
-		Firma = firma;
+	public void setCompany(String company) {
+		company = company;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [ID=" + ID + ", Imie=" + Imie + ", Nazwisko=" + Nazwisko + ", NIP=" + NIP + ", Firma=" + Firma
-				+ "]";
+		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", NIP=" + NIP
+				+ ", Company=" + company + "]";
 	}
+
+	
 	
 	
 
