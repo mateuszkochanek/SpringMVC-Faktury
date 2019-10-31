@@ -1,5 +1,7 @@
 package com.invoicedemo.config;
 
+import java.util.ArrayList;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +25,12 @@ public class AppController {
 	}
 	
 	@RequestMapping("/showcustomers")
-	public String showCustomersPage() {
+	public String showCustomersPage(Model theModel) {
+		
+		ArrayList<Customer> theCustomers = customerDAO.getCustomers();
+		
+		theModel.addAttribute("customers", theCustomers);
+		
 		return "show-customers";
 	}
 	
@@ -31,7 +38,6 @@ public class AppController {
 	public String showAddCustomerPage(Model theModel) {
 		
 		Customer theCustomer = new Customer();
-		
 		theModel.addAttribute("customer",theCustomer);
 		
 		return "add-customer";
