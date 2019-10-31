@@ -52,7 +52,7 @@ public class Customer implements Serializable {
 	}
 
 	public void setCompany(String company) {
-		company = company;
+		this.company = company;
 	}
 
 	@Override

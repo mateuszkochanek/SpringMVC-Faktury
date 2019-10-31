@@ -1,4 +1,4 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 
 <html>
@@ -10,12 +10,11 @@
 
 	<div id="wrapper">
 		<div id="header">
-			<h2>CRM - Customer Relationship Manager</h2>
+			<h2>Save Customer</h2>
 		</div>
 	</div>
 	
 	<div id="container">
-		<h3>Save Customer</h3>
 		<form:form action="savecustomer" modelAttribute="customer" method="POST" >
 		
 			<form:hidden path="id" />

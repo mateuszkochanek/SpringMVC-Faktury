@@ -20,7 +20,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private ArrayList<Customer> customers = new ArrayList<Customer>();
 	
 	public ArrayList<Customer> getCustomers() {
-		if(customers == null)
+		if(customers.isEmpty())
 			this.openCustomers();
 		return customers;
 	}
@@ -31,9 +31,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 			FileOutputStream f = new FileOutputStream(new File("C:/Users/User/Desktop/Faktury_Program/InvoiceMaker/src/main/resources/Customers.ser"));
 			ObjectOutputStream o = new ObjectOutputStream(f);
 			
-			//if(customers.isEmpty())
-			System.out.println("__________________________________>>>>");
-			System.out.println("__________________________________>>>>" + customers.size());
 			customer.setId(customers.size());
 			customers.add(customer);
 			// Write objects to file
@@ -54,7 +51,6 @@ public class CustomerDAOImpl implements CustomerDAO {
 			ObjectInputStream o = new ObjectInputStream(f);
 			
 			this.customers = (ArrayList<Customer>) o.readObject();
-			System.out.println(customers.size());
 			o.close();
 			f.close();
 			
