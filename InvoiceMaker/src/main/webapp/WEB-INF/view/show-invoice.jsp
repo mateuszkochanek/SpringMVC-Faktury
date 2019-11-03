@@ -34,15 +34,23 @@
 				<tr>
 					<th>Product</th>
 					<th>Count</th>
+					<th>Price for one Item</th>
 					<th>Price</th>
 				</tr>
 				<c:forEach var="tempInvoiceSubject" items="${invoice.invoiceSubjects}">
 					<tr>
 						<td> ${tempInvoiceSubject.product.name} </td>
 						<td> ${tempInvoiceSubject.count} </td>
+						<td> ${tempInvoiceSubject.product.price} </td>
 						<td> ${tempInvoiceSubject.finalPrice} </td>
 					</tr>
 				</c:forEach>
+				<tr>
+					<th>Sum:</th>
+					<th></th>
+					<th></th>
+					<th>${sumPrice}</th>
+				</tr>
 		</table>
 		<p>
 			<a href="/InvoiceMaker/">Back to Menu</a>
