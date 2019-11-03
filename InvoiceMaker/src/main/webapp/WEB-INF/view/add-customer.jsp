@@ -28,12 +28,12 @@
 					
 					<tr>
 						<td><label>Last name:</label></td>
-						<td><form:input path="lastName"/></td>
+						<td><form:input path="lastName" required="required"/></td>
 					</tr>
 					
 					<tr>
 						<td><label>NIP:</label></td>
-						<td><form:input path="NIP"/></td>
+						<td><form:input path="NIP" required="required"/></td>
 					</tr>
 					
 					<tr>

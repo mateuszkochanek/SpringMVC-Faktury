@@ -23,12 +23,12 @@
 				<tbody>
 					<tr>
 						<td><label>name:</label></td>
-						<td><form:input path="name"/></td>
+						<td><form:input path="name" required="required"/></td>
 					</tr>
 					
 					<tr>
 						<td><label>price:</label></td>
-						<td><form:input type="number" step="0.01" path="price"/></td>
+						<td><form:input type="number" step="0.01" path="price" required="required"/></td>
 					</tr>
 
 					<tr>
