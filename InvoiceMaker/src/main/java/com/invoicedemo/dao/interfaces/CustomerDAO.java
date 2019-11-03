@@ -8,4 +8,5 @@ public interface CustomerDAO {
 	public ArrayList<Customer> getCustomers();
 	public void saveCustomers(Customer customer);
 	public void openCustomers();
+	public Customer getCustomer(int theId);
 }

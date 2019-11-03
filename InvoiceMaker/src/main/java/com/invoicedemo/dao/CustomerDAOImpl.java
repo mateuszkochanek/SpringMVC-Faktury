@@ -64,5 +64,12 @@ public class CustomerDAOImpl implements CustomerDAO {
 		}
 	}
 
-
+	public Customer getCustomer(int theId) {
+		
+		for(Customer tempCustomer : customers) {
+			if(tempCustomer.getId() == theId)
+				return tempCustomer;
+		}
+		return null;
+	}
 }
