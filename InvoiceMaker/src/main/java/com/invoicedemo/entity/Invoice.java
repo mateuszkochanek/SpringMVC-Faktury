@@ -11,10 +11,19 @@ public class Invoice implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private int id;
 	private int customerId;
+	private String date;
 	private ArrayList <InvoiceSubject> invoiceSubjects;
 	
 	public Invoice() {
+		invoiceSubjects = new ArrayList<InvoiceSubject>();
+	}
 
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
 	}
 
 	public int getId() {
