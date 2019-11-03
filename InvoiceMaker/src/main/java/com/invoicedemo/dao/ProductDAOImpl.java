@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import org.springframework.stereotype.Component;
 
 import com.invoicedemo.dao.interfaces.ProductDAO;
+import com.invoicedemo.entity.Customer;
 import com.invoicedemo.entity.Product;
 
 @Component
@@ -64,5 +65,13 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
+	public Product getProduct(int productId) {
+			for(Product tempProduct : products) {
+				if(tempProduct.getId() == productId)
+					return tempProduct;
+			}
+			return null;
+		
+	}
 
 }
