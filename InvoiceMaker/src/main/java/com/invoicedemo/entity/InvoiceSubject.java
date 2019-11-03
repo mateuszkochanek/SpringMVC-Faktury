@@ -1,66 +1,71 @@
 package com.invoicedemo.entity;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 public class InvoiceSubject implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private int id;
-	private int productId;
-	private Product product;
-	private int count;
-	private float finalPrice;
-	
-	public InvoiceSubject() {
+  private static final long serialVersionUID = 1L;
+  private int id;
+  private int productId;
+  private Product product;
+  private int count;
+  private float finalPrice;
 
-	}
+  public InvoiceSubject() {
 
-	public int getId() {
-		return id;
-	}
+  }
+  
+  public InvoiceSubject(int id, int productId, Product product, int count, float finalPrice) {
+    this.id = id;
+    this.productId = productId;
+    this.product = product;
+    this.count = count;
+    this.finalPrice = finalPrice;
+  }
 
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	public int getProductId() {
-		return productId;
-	}
+  public int getId() {
+    return id;
+  }
 
-	public void setProductId(int productId) {
-		this.productId = productId;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public Product getProduct() {
-		return product;
-	}
+  public int getProductId() {
+    return productId;
+  }
 
-	public void setProduct(Product product) {
-		this.product = product;
-	}
+  public void setProductId(int productId) {
+    this.productId = productId;
+  }
 
-	public int getCount() {
-		return count;
-	}
+  public Product getProduct() {
+    return product;
+  }
 
-	public void setCount(int count) {
-		this.count = count;
-	}
-	
-	
-	public float getFinalPrice() {
-		return finalPrice;
-	}
+  public void setProduct(Product product) {
+    this.product = product;
+  }
 
-	public void setFinalPrice(float finalPrice) {
-		this.finalPrice = finalPrice;
-	}
+  public int getCount() {
+    return count;
+  }
 
-	@Override
-	public String toString() {
-		return "InvoiceSubject [id=" + id + ", product=" + product + ", count=" + count + "]";
-	}
-	
-	
+  public void setCount(int count) {
+    this.count = count;
+  }
+
+  public float getFinalPrice() {
+    return finalPrice;
+  }
+
+  public void setFinalPrice(float finalPrice) {
+    this.finalPrice = finalPrice;
+  }
+
+  @Override
+  public String toString() {
+    return "InvoiceSubject [id=" + id + ", product=" + product + ", count=" + count + "]";
+  }
+
 }

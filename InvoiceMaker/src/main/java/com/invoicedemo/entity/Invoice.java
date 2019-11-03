@@ -3,57 +3,62 @@ package com.invoicedemo.entity;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-import org.springframework.stereotype.Component;
-
-
 public class Invoice implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private int id;
-	private int customerId;
-	private String date;
-	private ArrayList <InvoiceSubject> invoiceSubjects;
-	
-	public Invoice() {
-		invoiceSubjects = new ArrayList<InvoiceSubject>();
-	}
+  private static final long serialVersionUID = 1L;
+  private int id;
+  private int customerId;
+  private String date;
+  private ArrayList<InvoiceSubject> invoiceSubjects;
 
-	public String getDate() {
-		return date;
-	}
+  public Invoice() {
+    invoiceSubjects = new ArrayList<InvoiceSubject>();
+  }
 
-	public void setDate(String date) {
-		this.date = date;
-	}
+  public String getDate() {
+    return date;
+  }
 
-	public int getId() {
-		return id;
-	}
+  public void setDate(String date) {
+    this.date = date;
+  }
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  public int getId() {
+    return id;
+  }
 
-	public int getCustomerId() {
-		return customerId;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
-	}
+  public int getCustomerId() {
+    return customerId;
+  }
 
-	public ArrayList<InvoiceSubject> getInvoiceSubjects() {
-		return invoiceSubjects;
-	}
+  public void setCustomerId(int customerId) {
+    this.customerId = customerId;
+  }
 
-	public void setInvoiceSubjects(ArrayList<InvoiceSubject> invoiceSubjects) {
-		this.invoiceSubjects = invoiceSubjects;
-	}
+  public ArrayList<InvoiceSubject> getInvoiceSubjects() {
+    return invoiceSubjects;
+  }
 
-	@Override
-	public String toString() {
-		return "Invoice [id=" + id + ", customerId=" + customerId + ", invoiceSubjects=" + invoiceSubjects + "]";
-	}
-	
-	
+  public void setInvoiceSubjects(ArrayList<InvoiceSubject> invoiceSubjects) {
+    this.invoiceSubjects = invoiceSubjects;
+  }
+
+  @Override
+  public String toString() {
+    return "Invoice [id=" + id + ", customerId=" + customerId 
+        + ", invoiceSubjects=" + invoiceSubjects + "]";
+  }
+
+  public float getSumPrice() {
+    float sum = 0;
+    for (InvoiceSubject tempSubject : invoiceSubjects) {
+      sum += tempSubject.getFinalPrice();
+    }
+    return sum;
+  }
+
 }

@@ -4,66 +4,61 @@ import java.io.Serializable;
 
 public class Customer implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	private int id;
-	private String firstName;
-	private String lastName;
-	private String NIP;
-	private String company;
-	
-	public Customer() {
-		
-	}
+  private static final long serialVersionUID = 1L;
+  private int id;
+  private String firstName;
+  private String lastName;
+  private String NIP;
+  private String company;
 
-	public int getId() {
-		return id;
-	}
+  public Customer() {
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  }
 
-	public String getFirstName() {
-		return firstName;
-	}
+  public int getId() {
+    return id;
+  }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public String getLastName() {
-		return lastName;
-	}
+  public String getFirstName() {
+    return firstName;
+  }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
 
-	public String getNIP() {
-		return NIP;
-	}
+  public String getLastName() {
+    return lastName;
+  }
 
-	public void setNIP(String nIP) {
-		NIP = nIP;
-	}
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
 
-	public String getCompany() {
-		return company;
-	}
+  public String getNIP() {
+    return NIP;
+  }
 
-	public void setCompany(String company) {
-		this.company = company;
-	}
+  public void setNIP(String nIP) {
+    NIP = nIP;
+  }
 
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", NIP=" + NIP
-				+ ", Company=" + company + "]";
-	}
+  public String getCompany() {
+    return company;
+  }
 
-	
-	
-	
+  public void setCompany(String company) {
+    this.company = company;
+  }
 
+  @Override
+  public String toString() {
+    return "Customer [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", NIP=" + NIP + ", Company="
+        + company + "]";
+  }
 
 }

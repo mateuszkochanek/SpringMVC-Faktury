@@ -6,8 +6,11 @@ import com.invoicedemo.entity.Customer;
 import com.invoicedemo.entity.Product;
 
 public interface ProductDAO {
-	public ArrayList<Product> getProducts();
-	public void saveProducts(Product product);
-	public void openProducts();
-	public Product getProduct(int productId);
+  public ArrayList<Product> getProducts();
+
+  public void saveProducts(Product product);
+
+  public void openProducts();
+
+  public Product getProduct(int productId);
 }
